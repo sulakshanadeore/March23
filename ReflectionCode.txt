@@ -87,3 +87,41 @@ double piValue = (double)calcType.InvokeMember("GetPi",
 double value = (double)calcType.InvokeMember("_number",
     BindingFlags.GetField | BindingFlags.Instance | BindingFlags.NonPublic,
     null, calcInstance, null);
+    ---------------------------------------------------
+    How to dig some more info?
+    //Type[] t=asm.GetTypes();
+            //foreach (var item in t)
+            //{
+            //    Console.WriteLine(item.FullName);
+            //    Console.WriteLine(item.Name);
+
+            //}
+            Type calctype = asm.GetType("Test.Calculator");
+
+            //PropertyInfo[] pinfo=calctype.GetProperties();
+            //foreach (var item in pinfo)
+            //{
+            //    Console.WriteLine(item.Name);
+            //    Console.WriteLine(item.MemberType);
+            //}
+
+            MethodInfo[] minfo=calctype.GetMethods();
+            foreach (var item in minfo)
+            {
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.IsStatic);
+                Console.WriteLine(item.IsPublic);
+                ParameterInfo[] pinfo=item.GetParameters();
+
+                Console.WriteLine("Paramter info");
+                foreach (var itempinfo in pinfo)
+                {
+                    Console.WriteLine(itempinfo.Name);
+                    Console.WriteLine(itempinfo.Position);
+                    Console.WriteLine(itempinfo.ParameterType);
+                    Console.WriteLine(itempinfo.DefaultValue);
+                    
+                }
+                Console.WriteLine("---------");
+            }
+    
