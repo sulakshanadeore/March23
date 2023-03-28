@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form validate>
+       <fieldset>
+            <legend>Personal Info</legend>
+            <label>Enter Name</label>
+            <input type="text" name="" id="" minlength="1" maxlength="5" required autofocus placeholder="Pls enter text only">
+             <br/>
+             <label for="email">Enter Email</label>
+             <input type="email" name="" id="">
+             <br/>
+             <label>Enter age</label>
+             <input type="number" name="" id="" min="10" max="70">
+             <label>enter password</label>
+             <input type="password" name="" id="">
+             <br/>
+             <label>Selct color</label>
+             <input type="color" name="" id="">
+             <br/>
+             <label>Select Month</label>
+             <input type="month" name="" id=""/>
+             <br/>
+             <label>Select date</label>
+             <input type="date" name="" id=""/>
+             <br/>
+             <label for="datetime">DateTime</label>
+             <input type="datetime-local" name="" id=""/>
+             <br/>
+             <label for="">time</label>
+             <input type="time" name="" id="">
+             <br/>
+             <label>Select </label>
+             <input type="range" min="10" max="100" step="10" value="30" onchange="alert(value)" />
+             
+             <label for="Meter">Meter</label>
+             <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter>
+             <br/>
+<label for="progress">Progress</label>
+             <progress id="file" value="32" max="100"> 32% </progress>
+             <br/>
+             <input type="submit" value="Submit"/>
+<!-- output,datalist,dropdwon,checkbox,radiobutton -->
+<br/>
+<label>Select One of them</label>
+<br/>
+<input type="radio" name="a" id="" value="Cheque"><label>Cheque</label>
+<br/>
+<input type="radio" name="a" id="" value="Cash"><label>Cash</label>
+<br/>
+<input type="radio" name="a" id="" value="upi"><label>UPI</label>
+<br/>
+<label for="">Subjects</label>
+<br/>
+<input type="checkbox" name="a1" id="" value="C"><label>C</label>
+<br/>
+<input type="checkbox" name="a1" id="" value="Cpp"><label>C++</label>
+<br/>
+<input type="checkbox" name="a1" id="" value="C#"><label>C#</label>
+<br/>
+
+<select id="browsers">
+    <option value="Explorer">Microsoft</option>
+    <option value="chrome">google</option>
+    <option value="Mozilla">Fir</option>
+    
+</select>
+
+<input type="text" list="b1" id="">
+<datalist id="b1">
+<option value="Microsoft">Edge</option>
+<option value="Chrome">google</option>
+<option value="Mozilla">Firefox</option>
+</datalist>
+<br/>
+<label for="">File Upload</label>
+<input type="file" name="filetoupload" id="" multiple>
+
+             <input type="button" value="Click" />
+             <button>Click here</button>
+             
+
+        </fieldset>
+    </form>
+    <!-- <video width="320" height="240" controls >
+        <source src="minions.mp4"/>
+    </video> -->
+    <!-- <audio width="320" height="240" controls autoplay> -->
+        <!-- <source src="01-Installing aspnet mvc - Part 1.mp4"/> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- </video> -->
+    
+</body> 
+</html>
