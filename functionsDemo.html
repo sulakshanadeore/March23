@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>  
+//First way  
+// function addnos(a,b)
+// {
+//     var d=a+b;
+//     return d;
+// }
+// let addAns=addnos(3,4);
+// console.log(addAns);
+
+//Second way---anonymous function
+// let addNos=function(a,b){
+
+//     var d=a+b;
+//      return d;
+// };
+// console.log(addNos(10,10));
+
+//Third way
+// var person={fname:'Gauri',lname:'GGG'};
+
+// (function()
+//     {
+//         console.log(person.fname + " " + person.lname);
+//     })(person);
+
+//Arrow Function
+// var person={fname:'Gauri',lname:'GGG'};
+// let data=()=>console.log(person.fname + " " + person.lname);
+// data();
+
+// let data1=(a,b)=> 
+// {
+//     console.log("Hello");
+//    // console.log(a+ " " + b);
+//    return a+b;
+// }
+// let ans=data1(10,20);
+// console.log(ans);
+
+//self invoking function
+//  var person={fname:'Gauri',lname:'GGG'};
+// (function()
+//      {
+//          console.log(person.fname + " " + person.lname);
+//      })();
+
+// function f1(a,b,c,d)
+// {
+// alert(arguments.length);
+// arguments[0];
+
+// }
+
+// function a(a,b){return a+b;}
+// function m(a,b){return a*b;}
+
+// function operate(operator,p1,p2)
+// {
+//     return operator(p1,p2);
+// }
+// // var ans=operate(m,10,20);
+// // console.log(ans);
+
+// var funs=new Object();
+// funs[0]=function(a,b){return a+b;};
+// funs[1]=function(a,b){return a-b;};
+// funs[2]=function(a,b){return a*b;};
+
+// var ans=operate(funs[0],10,20);
+// console.log(ans);
+
+//Nested Objects
+var person={
+fname:"Arti",
+lname:"G",
+age:20,
+address:{
+streetname:"JM Road",
+area:"Nagar",
+pin:"10001"
+},
+hobbies:["reading","swimming","riding","coding"]
+
+};
+
+let pdata=person;
+
+console.log(pdata.fname);
+pdata.fname="Lalita";
+console.log(person.fname);
+console.log(pdata.fname);
+
+function create()
+{
+let t="<ol>";
+for(i=0;i<person.hobbies.length;i++)
+{
+t+="<li>"+ person.hobbies[i]+"</li>"
+}
+t+="</ol>";
+//document.getElementById("div1").innerHTML=t;
+var bcoll=document.getElementsByTagName("body");
+bcoll[0].innerHTML+=t;
+}
+
+
+
+
+// const cars=new Array("alto","swift","bmw");
+// console.log(cars[0]);
+// cars[0]="Audi";
+// console.log(cars[0]);
+
+// function display()
+// {
+// console.log(person.fname);
+// console.log(person.lname);
+// console.log(person.age);
+// console.log(person.address.streetname);
+// console.log(person.address.area);
+// console.log(person.address.pin);
+// console.log(person.hobbies[0]);
+// console.log(Math.ceil(Math.random()*644));
+// }
+
+function showValues(a,b=0){
+
+
+}
+
+function showvalues2(name,city,age=1)
+{
+//b=b||0;
+console.log(name);
+console.log(city);
+console.log(age);
+
+}
+showValues(10);
+const persons=[];
+person["firstname"]="abc";
+person["age"]=30;
+person["city"]="Delhi";
+showvalues2(person["firstname"],person["city"],person["age"]);
+
+
+
+</script>
+</head>
+<body>
+<!-- onload="display()"> -->
+    <div id="div1" onclick="create()">Click here</div>
+    <form>
+        <fieldset>
+            <legend>info</legend>
+            <label for=""></label>
+        </fieldset>
+    </form>
+    <div id="div2">Some others here</div>
+</body>
+</html>

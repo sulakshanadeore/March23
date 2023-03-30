@@ -6,14 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var person={};  
-        person.firstname="Mahesh";
-        person.city="Jodhpur";
-        person.college="LPU";
-        person.fulldetails
-        {
-            console.log(person.firstname + "  " + person.city +" " + person.college);
-        }
+const cust=new Object();
+cust.custid=101;
+cust.custFname="Anita";
+cust.custcity="Pune";
+cust.lastname='Shrivastava';
+
+function display()
+{
+   // var len=cust.custname.length;
+   var d=displayfullname();
+    console.log(d);
+// console.log(cust.custid);
+// console.log(cust.custname);
+// console.log(len);
+// console.log(cust.custcity);
+}
+
+    function displayfullname()
+ {
+    
+var fullname=cust.custFname + " "  +cust.lastname;
+return fullname;
+ }
+
+ function C_clicked()
+ {
+if(document.getElementById("chkbook1").checked)
+{
+    alert("You clikced and checked c checkbox");
+}
+else
+{
+
+    alert("Its unchecked");
+}
+ }
+
+ function Cpp_clicked()
+ {
+  
+    if(document.getElementById("chkbook2").checked)
+{
+    document.getElementById("chkbook2").checked=false;
+    alert("You clikced and checked off cpp radio button");
+}
+    else (document.getElementById("chkbook2").checked)
+    {
+        alert("now u checked")
+
+    }
+ }
+
+
+ function showAttributes()
+ {
+let a=document.getElementById("i1").attributes;
+for (let index = 1; index < a.length; index++) {
+   var data=a[index].name;
+   console.log(data);
+   var datavalue=a[index].value;
+   console.log(datavalue);
+
+    
+}
+   
+    
+}
+
+ 
+
+        // var person={};  
+        // person.firstname="Mahesh";
+        // person.city="Jodhpur";
+        // person.college="LPU";
+        // person.fulldetails
+        // {
+        //     console.log(person.firstname + "  " + person.city +" " + person.college);
+        // }
         // function display()
         // {
         //     console.log(person.firstname + "  " + person.city +" " + person.college);
@@ -21,7 +91,17 @@
         // }
     </script>
 </head>
-<body>
+<body onload="display()">
+
+
+    <img id="i1" src="books.jpg" alt="booksimage" width="200px" height="300px"/>
+
+    <form action="">
+    <input type="checkbox" onchange="C_clicked()" name=""  id="chkbook1"><label>C</label>
+    <input type="radio" onchange="Cpp_clicked()" name=""   id="chkbook2"><label>C++</label>
+</form>
+
+
     
 </body>
 </html>
