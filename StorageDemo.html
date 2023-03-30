@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var customer={
+       custname:"Raj",
+       custcity:"Mumbai",
+    //    showCustomerDetails:function(){
+    //     //print
+    //     var n=localStorage.getItem("name");
+    //     var c=localStorage.getItem("city");
+    //     console.log(n);
+    //     console.log(c);
+    //    },
+       savecustomerDetails:function(){
+        this.custname=document.getElementById("txtname").value;
+        this.custcity=document.getElementById("txtcity").value;
+localStorage.setItem("name",this.custname);
+localStorage.setItem("city",this.custcity);
+
+       }
+        };
+//        function display()
+//        {
+// customer.showCustomerDetails();
+
+//        }
+       function accept()
+       {
+
+        customer.savecustomerDetails();
+       }
+
+       function displayNextPage() {
+        window.location.replace("https://www.google.com");
+        //window.location.href = "http://www.w3schools.com";
+       }
+       
+    </script>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="">Enter Customer Name</label>
+            <input type="text" name="" id="txtname">
+            <br/>
+            <label for="">Enter Customer City</label>
+            <input type="text" name="" id="txtcity">
+            <br/>
+            <button  onclick="accept()">Accept Customer</button>
+            <!-- <button  onclick="display()">Display Customer</button> -->
+         
+
+        </fieldset>
+    </form>
+    <button  onclick="displayNextPage()">Show</button>
+    
+</body>
+</html>

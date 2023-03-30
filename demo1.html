@@ -5,15 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
     p{
 background-color: red;
 display:inline-block;
     }
     </style>
+    <script src="file1.js"></script>
+    <!-- <script>
+      
+alert("Hello");
+    </script> -->
 </head>
-<body>
-    <p>This is a paragraph</p>
+<body onload="acceptDatausingPrompt()">
+    <noscript>
+    Your browser has disabled javascript
+    </noscript>
+
+
+<div id="d1">
+    <p id="p1" onclick="f1()">This is a paragraph. </p>
+    <p>This is another para</p>
+</div>
+    <form method="post" action="">
+        <fieldset><legend>Personal Info</legend>
+        <label>Enter Name</label>
+        <input type="text" name="" id="txtname">
+        <label>Enter age</label>
+        <input type="number" id="txtage">
+        <label>Enter firstnumber</label>
+        <input type="number" name="" id="fno">
+        <label>Enter secondnumber</label>
+        <input type="number" name="" id="sno">
+        <!-- <input type="submit" value="Submit" onclick="acceptData()"/> -->
+        <input type="submit" value="submit" onclick="evaldemo()">
+        <!-- <button onclick="dateData()">Date Fun-button</button>
+        <input type="button" onclick="dateData()" value="DateCall-Inputbutton"/>
+        <input type="reset" value="reset"/ >
+        <input type="submit" value="Submit(==)" onclick="f2()"/> -->
+        </fieldset>
+        
+    </form>
+
+
     
 
 </body>

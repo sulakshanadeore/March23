@@ -1,0 +1,18 @@
+a.highlight:hover
+{
+color:green
+}
+a:last-child
+{
+color: red;
+}
+p:first-letter
+{
+
+color:blue;
+}
+input:required
+{
+color:blue;
+
+}

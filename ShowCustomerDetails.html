@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     function   display()
+       {
+      //  var n=localStorage.getItem("name");
+        //var c=localStorage.getItem("city");
+        if (localStorage.length==0)
+        {
+            alert("No data");
+        }
+        else        
+        {
+        document.getElementById("txtname").value=localStorage.getItem("name");
+        document.getElementById("txtcity").value=localStorage.getItem("city");
+        }
+        // console.log(n);
+        // console.log(c);
+        }
+        function cleardata()
+        {
+
+            localStorage.clear("");
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="">Enter Customer Name</label>
+            <input type="text" name="" id="txtname">
+            <br/>
+            <label for="">Enter Customer City</label>
+            <input type="text" name="" id="txtcity">
+            <br/>
+         
+            <button  type="button" onclick="display()">Display Customer</button>
+            <button  type="button" onclick="cleardata()">clear Customer</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>

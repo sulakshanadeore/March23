@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            margin:20px;
+            border:2px solid blue;
+            height: auto;
+            width: auto;
+            padding:20px 10px 30px 40px;
+        }
+
+        form {
+            display: block;
+            background-color: aqua;
+            /* border-width: 2px;
+border-color:  red;
+border-style: solid; */
+            border: 2px solid red;
+
+        }
+
+        #emailid {
+            background-color: cornflowerblue;
+        }
+
+        #txtname {
+            background-color: chartreuse;
+        }
+
+        input {
+            background-color: orange;
+            border-radius: 16px;
+        }
+
+        /* div{
+        height: 40px;
+        /* width: 440px; */
+        /* display: block;
+        text-align: center;
+        background-color: aqua;
+        } */
+
+        */ #p1 {
+            font-family: 'Courier New', Courier, monospace;
+            /* font-size: 12px; */
+            /* font-style: italic; */
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <header>
+            <div>
+                <h1>Info Form</h1>
+            </div>
+        </header>
+        <p>Thsis is the <strong>first</strong> line of content and <span>I want this bold</span></p>
+        <p id="p1">Thsis is the <strong>first</strong> line of content and <span>I want this bold</span></p>
+        <br />
+        <form>
+            <fieldset>
+                <legend>Info</legend>
+                <label class="c1">Enter Name</label>
+                <input class="c1" type="text" name="" id="txtname" minlength="1" maxlength="5" required autofocus
+                    placeholder="Pls enter text only">
+                <br />
+                <label class="c1" for="email">Enter Email</label>
+                <input type="email" name="" class="c1" id="emailid">
+                <br />
+                <label class="c1">Enter age</label>
+                <input class="c1" type="number" name="" id="" min="10" max="70">
+
+                <label>enter password</label>
+                <input type="password" name="" id="">
+                <br />
+                <label>Selct color</label>
+                <input type="color" name="" id="">
+                <br />
+            </fieldset>
+        </form>
+
+        <img src="books.jpg" style="border: 2px solid red;display: inline" />
+        <input type="text" />
+        <br />
+        <img src="books.jpg" style="border-radius:50%;border: 2px solid;" />
+    </div>
+</body>
+
+</html>

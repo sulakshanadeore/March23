@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function data1() 
+        // {
+            //var studlist=['Ana',"Kajal","Tina","Mina"];
+            //alert(studlist);
+            //alert(studlist[0]);
+            var person = 
+            {
+                fname:string= "Arti",
+                deptno:number= 10,
+                isvalid:true,
+
+                showdetails:function() {
+
+                    //     alert(this.fname);
+                    // alert(this.deptno);
+                    var personFname = localStorage.getItem("firstname");
+                    var dno = localStorage.getItem("pDeptno");
+                    alert(personFname);
+                    alert(dno);
+                    
+                },
+                Storedetails:function() {
+                    localStorage.setItem("firstname", this.fname);
+                    localStorage.setItem("pDeptno", this.deptno);
+
+
+                }
+
+            };
+
+
+
+        //}
+function store()
+{
+person.Storedetails();
+}
+function show()
+{
+
+    person.showdetails();
+}
+
+    </script>
+</head>
+
+<body>
+     <button onclick="store()">Set Data</button>
+    <button onclick="show()">Get Data</button>
+
+
+</body>
+
+</html>
